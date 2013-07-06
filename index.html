@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>hPlayer - VLC web plugin</title>
+    <meta name="description" content="">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/hPlayer.css" rel="stylesheet">
+  </head>
+  <body>
+<div id="hPlayer"></div>
+<div class="continer">
+    <div class="controls">
+        <input class="inputs" id="playUrl" value="http://download.blender.org/peach/bigbuckbunny_movies/big_buck_bunny_480p_surround-fix.avi" type="text">
+        <a href="#" class="btn-light"  onclick="hPlayer.play({ stream: $('#playUrl').val()}); return false">Play</a>
+    </div>
+</div>
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+<script src="js/hPlayer.js"></script>
+<script type="text/javascript">
+        hPlayer.init({});
+</script>
+  </body>
+</html>

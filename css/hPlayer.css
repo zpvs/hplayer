@@ -1,0 +1,296 @@
+#hPlayer{
+    position: relative;
+    z-index: 1;
+    width: 940px !important;
+    height: 500px !important;
+    background: #555a5f; /* Old browsers */
+    background: -moz-radial-gradient(center, ellipse cover, #555a5f 0%, #1c1e20 100%); /* FF3.6+ */
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#555a5f), color-stop(100%,#1c1e20)); /* Chrome,Safari4+ */
+    background: -webkit-radial-gradient(center, ellipse cover, #555a5f 0%,#1c1e20 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-radial-gradient(center, ellipse cover, #555a5f 0%,#1c1e20 100%); /* Opera 12+ */
+    background: -ms-radial-gradient(center, ellipse cover, #555a5f 0%,#1c1e20 100%); /* IE10+ */
+    background: radial-gradient(ellipse at center, #555a5f 0%,#1c1e20 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#555a5f', endColorstr='#1c1e20',GradientType=0 ); /* IE6-9 */
+    background-color: #2b2b2b;
+    border: 1px solid #1d1d1d;
+    margin: 20px auto;
+    -webkit-box-shadow:0 0 10px rgba(0, 0, 0, 0.29), inset 0 0 2px rgba(255, 255, 255, 0.85);
+       -moz-box-shadow:0 0 10px rgba(0, 0, 0, 0.29), inset 0 0 2px rgba(255, 255, 255, 0.85);
+            box-shadow:0 0 10px rgba(0, 0, 0, 0.29), inset 0 0 2px rgba(255, 255, 255, 0.85);
+}
+#hPlayer-screen{
+    position: absolute;
+    z-index: 2;
+    top: 2px;
+    left: 2px;
+    width: 936px;
+    height: 464px;
+    background: transparent url(../img/logo.png) no-repeat center center !important;
+}
+#hPlayer-plugin{
+    display: block;
+    position: absolute;
+    z-index: 1;
+    background: #1c1e20;
+    background: -moz-radial-gradient(center, circle cover, #555a5f 0%, #1c1e20 100%);
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #555a5f), color-stop(100%, #1c1e20));
+    background: -webkit-radial-gradient(center, circle cover, #555a5f 0%, #1c1e20 100%);
+    background: -o-radial-gradient(center, circle cover, #555a5f 0%, #1c1e20 100%);
+    background: -ms-radial-gradient(center, circle cover, #555a5f 0%, #1c1e20 100%);
+    background: radial-gradient(center, circle cover, #555a5f 0%, #1c1e20 100%);
+    background-color: #2b2b2b;
+}
+#hPlayer-infoBox{
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    width: 936px;
+    height: 464px;
+    background: #1c1e20;
+}
+.infoBox-overlay{
+    position: relative;
+    width: 250px !important;
+    height: 150px !important;
+    top: 150px !important;
+    left: 25px !important;
+    z-index: 4;
+    background-color: #000000;
+    -webkit-box-shadow:0 0 5px rgba(85, 90, 95, 0.84);
+    -moz-box-shadow:0 0 5px rgba(85, 90, 95, 0.84);
+    box-shadow:0 0 5px rgba(85, 90, 95, 0.84);
+}
+.infoBox-inner{
+    margin-left: 300px;
+    display: block;
+    height: 96%;
+    padding: 1%;
+    background-color: #43474b;
+    color: whitesmoke;
+}
+.infoBox-inner h2 {
+    font-size: 21px;
+    font-weight: lighter;
+    border-bottom: 1px solid #555a5f;
+    font-family: 'Vernanda', sans-serif;
+    color: #b4bcc6;
+}
+.infoBox-inner p {
+    font-size: 11.5px;
+    font-weight: normal;
+    color: #b4bcc6;
+    text-align: right;
+
+}
+.SettingsRatio, .SettingsDeint, .SettingsAudio {margin-top: 15px;margin-bottom: 15px;display: block;}
+
+
+#hPlayer-toolbar{
+    position: absolute;
+    z-index: 2;
+    bottom: -1px;
+    left: -1px;
+    width: 940px !important;
+    height: 34px !important;
+    background-color: #282828;
+    border: 1px solid #1b1b1b;
+    margin: 0 auto;
+    -webkit-box-shadow:0 0 10px rgba(0, 0, 0, 0.29), inset 0 0 2px rgba(255, 255, 255, 0.85);
+    -moz-box-shadow:0 0 10px rgba(0, 0, 0, 0.29), inset 0 0 2px rgba(255, 255, 255, 0.85);
+    box-shadow:0 0 10px rgba(0, 0, 0, 0.29), inset 0 0 2px rgba(255, 255, 255, 0.85);
+
+}
+.btn-player{
+    display: inline-block;
+    padding: 1px 14px;
+    margin-bottom: 0;
+    width: 14px;
+    margin-left: 2px;
+    font-size: 14px;
+    line-height: 21px;
+    color: #fff;
+    text-align: center;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.75);
+    vertical-align: middle;
+    cursor: pointer;
+    background: #3f4246; /* Old browsers */
+    background: -moz-radial-gradient(center, ellipse cover, #3f4246 0%, #1c1e20 100%); /* FF3.6+ */
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#3f4246), color-stop(100%,#1c1e20)); /* Chrome,Safari4+ */
+    background: -webkit-radial-gradient(center, ellipse cover, #3f4246 0%,#1c1e20 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-radial-gradient(center, ellipse cover, #3f4246 0%,#1c1e20 100%); /* Opera 12+ */
+    background: -ms-radial-gradient(center, ellipse cover, #3f4246 0%,#1c1e20 100%); /* IE10+ */
+    background: radial-gradient(ellipse at center, #3f4246 0%,#1c1e20 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3f4246', endColorstr='#3f4246',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    background-color: #3f4246;
+    border: 1px solid #1d1d1d;
+    -webkit-box-shadow:0 0 5px rgba(0, 0, 0, 0.29), inset 0 0 2px rgba(155, 163, 171, 0.83);
+    -moz-box-shadow:0 0 5px rgba(0, 0, 0, 0.29), inset 0 0 2px rgba(155, 163, 171, 0.83);
+    box-shadow:0 0 5px rgba(0, 0, 0, 0.29), inset 0 0 2px rgba(155, 163, 171, 0.83);
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+.btn-player:hover{
+    color: #fff;
+    background: #00b7e9; /* Old browsers */
+    background: -moz-radial-gradient(center, ellipse cover, #00b7e9 0%, #1c1e20 100%); /* FF3.6+ */
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#00b7e9), color-stop(100%,#1c1e20)); /* Chrome,Safari4+ */
+    background: -webkit-radial-gradient(center, ellipse cover, #00b7e9 0%,#1c1e20 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-radial-gradient(center, ellipse cover, #00b7e9 0%,#1c1e20 100%); /* Opera 12+ */
+    background: -ms-radial-gradient(center, ellipse cover, #00b7e9 0%,#1c1e20 100%); /* IE10+ */
+    background: radial-gradient(ellipse at center, #00b7e9 0%,#1c1e20 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00b7e9', endColorstr='#00b7e9',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    background-color: #00b7e9;
+    border: 1px solid #00242e;
+}
+.btn-menu{
+    font-size: 12px;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.75);
+    margin-left: 10px;
+    width: 8%;
+    padding: 2px 11px;
+    border:  none;
+    background-color: #71777e;
+
+}
+.btn-menu:hover{
+    color: #fff;
+    background: #00b7e9; /* Old browsers */
+    background: -moz-radial-gradient(center, ellipse cover, #00b7e9 0%, #1c1e20 100%); /* FF3.6+ */
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#00b7e9), color-stop(100%,#1c1e20)); /* Chrome,Safari4+ */
+    background: -webkit-radial-gradient(center, ellipse cover, #00b7e9 0%,#1c1e20 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-radial-gradient(center, ellipse cover, #00b7e9 0%,#1c1e20 100%); /* Opera 12+ */
+    background: -ms-radial-gradient(center, ellipse cover, #00b7e9 0%,#1c1e20 100%); /* IE10+ */
+    background: radial-gradient(ellipse at center, #00b7e9 0%,#1c1e20 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00b7e9', endColorstr='#00b7e9',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    background-color: #00b7e9;
+    border: 0px solid #00242e;
+}
+
+.playerControl{
+    display: inline-block;
+    position: absolute;
+    height: 24px;
+    width: 27%;
+    padding: 4px 1%;
+}
+#player-volume{
+    border: 0px solid #0b0f19;
+    width: 100px;
+    position: absolute;
+    height: 10px;
+    background-color: #ffffff;
+    right: 5%;
+    top: 13px;
+    cursor: pointer;
+    -webkit-border-radius:5px;
+    -moz-border-radius:5px;
+    border-radius:5px;
+    -webkit-box-shadow:0 0 1px rgb(0, 0, 0), inset 0 0 1px rgb(0, 0, 0);
+    -moz-box-shadow:0 0 1px rgb(0, 0, 0), inset 0 0 1px rgb(0, 0, 0);
+    box-shadow:0 0 1px rgb(0, 0, 0), inset 0 0 1px rgb(0, 0, 0);
+
+}
+.ui-slider-handle {
+    width:24px;
+    height:24px;
+    position:absolute;
+    top:-7px;
+    margin-left:-12px;
+    z-index:200;
+    background: transparent url(../img/sl_but.png) no-repeat center center !important;
+
+}
+.ui-slider-range {
+    background: #00b0de;
+    position: absolute;
+    border: 0;
+    top: 0;
+    height: 100%;
+    -webkit-border-radius:5px;
+    -moz-border-radius:5px;
+    border-radius:5px;
+}
+.playerInfo{
+    display: inline-block;
+    position: absolute;
+    height: 24px;
+    left:29%;
+    width: 52%;
+    padding: 8px 1%;
+    color: #c0e3ff;
+    font-size: 13px;
+}
+.playerConfig{
+    display: inline-block;
+    position: absolute;
+    height: 24px;
+    width: 15%;
+    left:83%;
+    text-align: right;
+    padding: 4px 1%;
+}
+.clear{
+    display: inline-block;
+
+}
+
+
+#hPlayer:-webkit-full-screen{
+    position: relative;
+    z-index: 1;
+    width: 99.9% !important;
+    height: 100% !important;
+    margin: 0 auto;
+}
+#hPlayer:-webkit-full-screen > #hPlayer-toolbar{
+    width: 100% !important;
+}
+#hPlayer:-webkit-full-screen > #hPlayer-screen{
+    width: 100% !important;
+    height: 100% !important;
+}
+#hPlayer:-webkit-full-screen  #hPlayer-infoBox{
+    width: 100% !important;
+    height: 100% !important;
+}
+#hPlayer:-webkit-full-screen  object{
+zoom: 10;
+}
+#hPlayer:-webkit-full-screen  .playerControl{
+    width: 20% !important;
+}
+#hPlayer:-webkit-full-screen  .playerInfo{
+    width: 59% !important;
+    left:22% !important;
+}
+
+#hPlayer:-moz-full-screen{
+    position: relative;
+    z-index: 1;
+    width: 99.9% !important;
+    height: 100% !important;
+    margin: 0 auto;
+}
+#hPlayer:-moz-full-screen > #hPlayer-toolbar{
+    width: 100% !important;
+}
+#hPlayer:-moz-full-screen > #hPlayer-screen{
+    width: 100% !important;
+    height: 100% !important;
+}
+#hPlayer:-moz-full-screen  #hPlayer-infoBox{
+    width: 100% !important;
+    height: 100% !important;
+}
+#hPlayer:-moz-full-screen  object{
+    zoom: 10;
+}
+#hPlayer:-moz-full-screen  .playerControl{
+    width: 20% !important;
+}
+#hPlayer:-moz-full-screen  .playerInfo{
+    width: 59% !important;
+    left:22% !important;
+}
